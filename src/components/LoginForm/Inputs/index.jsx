@@ -7,7 +7,7 @@ const Input = (props) => {
     <div>
       <label htmlFor="login">
         <input
-          type="email"
+          type="text"
           name="login"
           id="login"
           value={login}
