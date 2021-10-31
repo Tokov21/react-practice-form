@@ -1,28 +1,21 @@
 import React from "react";
 
-const Input = ({
-  type,
-  name,
-  id,
-  value,
-  handleChange,
-  placeholder,
-  labelBefore,
-  labelAfter,
-  required,
-}) => {
+const Input = ({ value, handleChange, labelBefore, labelAfter, ...rest }) => {
+  console.log(rest);
+
   return (
     <div>
-      <label htmlFor={id}>
+      <label>
         {labelBefore}
 
         <input
-          type={type}
-          name={name}
-          id={id}
+          {...rest}
+          // type={type}
+          // name={name}
+          // id={id}
           value={value}
-          placeholder={placeholder}
-          required={required}
+          // placeholder={placeholder}
+          // required={required}
           onChange={handleChange}
         />
 
