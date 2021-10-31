@@ -50,11 +50,11 @@ class LoginForm extends Component {
       this.handleReset();
     }
 
-    if (!regexEmail.test(this.state.login)) {
+    if (regexEmail.test(this.state.login) === false) {
       alert("Имеил должен быть: текст@текст.домен");
     }
 
-    if (!regexPass.test(this.state.password)) {
+    if (regexPass.test(this.state.password) === false) {
       alert(
         "Пароль должен иметь: одну заглавную, одну прописную буквы, одну цифру и один специальный символ"
       );
